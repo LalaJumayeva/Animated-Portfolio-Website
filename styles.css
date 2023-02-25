@@ -10,7 +10,10 @@
 body {
     overflow: hidden;
     background-color: #f3f5f8;
+    ;
 }
+
+/* header section */
 
 #header {
     width: 100%;
@@ -75,4 +78,124 @@ nav a:hover::after{
 #header img {
     width: 130px;
     height: auto;
+}
+
+/* introduction section */
+
+#intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+    height: calc(100vh-10vh);
+    width: 100%;
+}
+
+#intro::before{
+    position: absolute;
+    content: '';
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    left: -10%;
+    top:40%;
+    background: linear-gradient(45deg,  rgba(116, 23, 208, 0.958), rgb(252, 168, 244));
+}
+
+#intro::after{
+    position: absolute;
+    content: '';
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    left: 30%;
+    top:15%;
+    background: linear-gradient(45deg,  rgba(116, 23, 208, 0.958), rgb(252, 168, 244));
+}
+
+.cols{
+    width: 50%;
+    z-index: 50;
+}
+
+.topline{
+    display: block;
+    position:relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color:  rgb(67, 67, 67);
+}
+
+.topline::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width:45px;
+    bottom: 10px;
+    background-color: rgb(190, 31, 229);;
+}
+
+h1{
+    display: block;
+    font-size: 5em;
+    font-weight: 900;
+    color:  rgb(67, 67, 67);
+}
+
+.multitext{
+    color: rgb(190, 31, 229);
+    text-transform: capitalize; 
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns button{
+    margin-right: 15px;
+    box-shadow: 0 17px 10px rgba(0,0,0,0.4);
+}
+
+.imgbox{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.imgbox img{
+    position: relative;
+    height: 100%;
+    width: calc(130% - 10vh);
+    top:-50px;
+    right: 50px;
+    animation: animateUser 4s linear infinite;
+}
+
+@keyframes animateUser{
+    50%{
+        right: 30px;
+        top: -60px;
+    }
+}
+
+ #splash{
+    position: absolute;
+    top:50%;
+    left:60%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    width: 130%;
+    height: auto;
+    filter: saturate(200%);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate{
+    50%{
+        top: 47%;
+        left: 63%;
+        width: 135%;
+    }
 }
