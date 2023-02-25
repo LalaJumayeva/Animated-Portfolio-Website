@@ -36,7 +36,7 @@ nav li {
     position: relative;
 }
 
-nav a{
+nav a {
     color: rgb(67, 67, 67);
     font-weight: 500;
     font-size: 20px;
@@ -48,12 +48,13 @@ nav li a:hover {
     transition: 0.3s ease;
     text-decoration: none;
 }
+
 li a.active {
     color: rgb(190, 31, 229);
 }
 
 nav a.active::after,
-nav a:hover::after{
+nav a:hover::after {
     content: "";
     width: 15%;
     height: 3px;
@@ -64,14 +65,14 @@ nav a:hover::after{
     bottom: -4px;
 }
 
-#header .links a{
-    color:  rgb(67, 67, 67);
+#header .links a {
+    color: rgb(67, 67, 67);
     padding-right: 5px;
     padding-left: 15px;
 
 }
 
-#header .links a:hover{
+#header .links a:hover {
     color: rgb(190, 31, 229);
 }
 
@@ -82,7 +83,7 @@ nav a:hover::after{
 
 /* introduction section */
 
-#intro{
+#intro {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,99 +93,125 @@ nav a:hover::after{
     width: 100%;
 }
 
-#intro::before{
+#intro::before {
     position: absolute;
     content: '';
     height: 300px;
     width: 300px;
     border-radius: 50%;
     left: -10%;
-    top:40%;
-    background: linear-gradient(45deg,  rgba(116, 23, 208, 0.958), rgb(252, 168, 244));
+    top: 40%;
+    background: linear-gradient(45deg, rgba(116, 23, 208, 0.958), rgb(252, 168, 244));
+    animation: bigcircle 3s linear infinite;
 }
 
-#intro::after{
+@keyframes bigcircle {
+    50% {
+        left: -12%;
+        top: 43%
+    }
+}
+
+#intro::after {
     position: absolute;
     content: '';
     height: 100px;
     width: 100px;
     border-radius: 50%;
     left: 30%;
-    top:15%;
-    background: linear-gradient(45deg,  rgba(116, 23, 208, 0.958), rgb(252, 168, 244));
+    top: 15%;
+    background: linear-gradient(45deg, rgba(116, 23, 208, 0.958), rgb(252, 168, 244));
+    animation: lilcircle1 3s linear infinite;
 }
 
-.cols{
+@keyframes lilcircle1 {
+    
+}
+
+.cols {
     width: 50%;
     z-index: 50;
 }
 
-.topline{
-    display: block;
-    position:relative;
-    font-size: 35px;
-    letter-spacing: 5px;
-    color:  rgb(67, 67, 67);
+.cols1::after {
+    position: absolute;
+    content: '';
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    bottom: -3%;
+    right: -3%;
+    background: linear-gradient(45deg, rgba(116, 23, 208, 0.958), rgb(252, 168, 244));
+
 }
 
-.topline::after{
+.topline {
+    display: block;
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: rgb(67, 67, 67);
+}
+
+.topline::after {
     position: absolute;
     content: '';
     height: 4px;
-    width:45px;
+    width: 45px;
     bottom: 10px;
-    background-color: rgb(190, 31, 229);;
+    background-color: rgb(190, 31, 229);
+    ;
 }
 
-h1{
+h1 {
     display: block;
     font-size: 5em;
     font-weight: 900;
-    color:  rgb(67, 67, 67);
+    color: rgb(67, 67, 67);
 }
 
-.multitext{
+.multitext {
     color: rgb(190, 31, 229);
-    text-transform: capitalize; 
+    text-transform: capitalize;
 }
 
-.btns{
+.btns {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.btns button{
+.btns button {
     margin-right: 15px;
-    box-shadow: 0 17px 10px rgba(0,0,0,0.4);
+    box-shadow: 0 17px 10px rgba(0, 0, 0, 0.4);
 }
 
-.imgbox{
+.imgbox {
     position: relative;
     height: 100%;
     width: 100%;
 }
 
-.imgbox img{
+.imgbox img {
     position: relative;
     height: 100%;
     width: calc(130% - 10vh);
-    top:-50px;
+    top: -50px;
     right: 50px;
-    animation: animateUser 4s linear infinite;
+    animation: animateUser 5s linear infinite;
 }
 
-@keyframes animateUser{
-    50%{
+@keyframes animateUser {
+    50% {
         right: 30px;
         top: -60px;
     }
 }
 
- #splash{
+#splash {
     position: absolute;
-    top:50%;
-    left:60%;
+    top: 50%;
+    left: 60%;
     transform: translate(-50%, -50%) rotate(-30deg);
     width: 130%;
     height: auto;
@@ -192,8 +219,8 @@ h1{
     animation: animate 4s linear infinite;
 }
 
-@keyframes animate{
-    50%{
+@keyframes animate {
+    50% {
         top: 47%;
         left: 63%;
         width: 135%;
