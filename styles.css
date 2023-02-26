@@ -282,19 +282,28 @@ h1 {
 
 #greeting .image {
     position: relative;
-    right: 0px;
-    animation: myphoto 1.5s linear infinite;
-}
-
-@keyframes myphoto {
-    50% {
-        right: 10px;
-    }
 }
 
 #greeting img {
     width: 80%;
     border-radius: 10px;
+}
+
+#greeting #colorsplash{
+    position: absolute;
+    z-index: 0;
+    width: 40%;
+    bottom: 180px;
+    left: 0;
+    height: auto;
+    transform: rotate(-10deg);
+    animation: colorobject 3s linear infinite;
+}
+
+@keyframes colorobject{
+    50%{
+        width: 38%;
+    }
 }
 
 
@@ -315,9 +324,36 @@ h1 {
     padding: 10px 80px;
 }
 
+#storyline::after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 0;
+    position: absolute;
+    left: -3%;
+    bottom: -35%;
+    background: linear-gradient(45deg, rgba(116, 23, 208, 0.958), rgb(252, 168, 244));
+    animation: circle2 2s linear infinite;
+}
+
+@keyframes circle2{
+    50%{
+        left:-2%;
+        bottom: -36%;
+    }
+}
+
 .maintext {
     width: 50%;
     padding: 0px 30px;
+}
+
+.maintext h2{
+    padding-bottom: 5px;
+}
+.maintext p{
+    padding-top: 10px;
 }
 
 #storyline .educationandexperience {
@@ -339,6 +375,10 @@ h1 {
 #storyline table td {
     padding: 5px 5px;
     border: 1px solid #606060;
+}
+
+.education{
+    padding-top: 55px;
 }
 
 
