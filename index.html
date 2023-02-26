@@ -12,16 +12,27 @@
     <link rel="stylesheet" href="styles.css">
     <title>Lala's Portfolio</title>
 </head>
-
+<style>
+    body{
+        overflow: hidden;
+    }
+</style>
 <body>
     <section id="header">
-        <a class="logo" href=""><img src="" alt=""><img src="image/logo.png" alt=""></a>
+        <a class="logo" href="index.html"><img src="image/logo.png" alt=""></a>
         <nav>
             <ul>
-                <li><a class="active" href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Skills</a></li>
-                <li><a href="">Blog</a></li>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+                <div class="links-mob">
+                    <a href="https://www.linkedin.com/in/lala-jumayeva98/"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+                    <a href="https://github.com/LalaJumayeva"><i class="fa-brands fa-github fa-xl"></i></a>
+                    <a href="https://www.behance.net/lalacumayeva"><i class="fa-brands fa-behance fa-xl"></i></a>
+                </div>
+
             </ul>
         </nav>
         <div class="links">
@@ -29,12 +40,16 @@
             <a href="https://github.com/LalaJumayeva"><i class="fa-brands fa-github fa-xl"></i></a>
             <a href="https://www.behance.net/lalacumayeva"><i class="fa-brands fa-behance fa-xl"></i></a>
         </div>
+
+        <div id="hamburger">
+            <i class="fa-solid fa-bars fa-xl"></i>
+        </div>
     </section>
 
     <section id="intro">
         <div class="cols cols0">
             <span class="topline">Hello</span>
-            <h1>I'm <span class="multitext">Coder</span></h1>
+            <h1>I'm a <span class="multitext"></span></h1>
             <p>In addition to my studies, I have 1 year of Web Design
                 experience. I have developed and maintained web
                 applications using JavaScript, HTML5, CSS, Bootstrap, MongoDB (mongoose) database, Nodejs, and Express.
@@ -43,7 +58,7 @@
             </p>
             <div class="btns">
                 <button class="btn btn-dark">Download CV</button>
-                <button class="btn btn-outline-dark">Contact Me</button>
+                <button type="button" onclick="location.href='contact.html'" class="btn btn-outline-dark">Contact Me</button>
             </div>
         </div>
         <div class="cols cols1">
@@ -54,6 +69,8 @@
         </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
