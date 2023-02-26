@@ -8,9 +8,7 @@
 }
 
 body {
-    overflow: hidden;
     background-color: #f3f5f8;
-    ;
 }
 
 /* header section */
@@ -22,6 +20,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+#close {
+    display: none;
+}
+
+.links-mob {
+    display: none;
 }
 
 nav ul {
@@ -81,6 +87,10 @@ nav a:hover::after {
     height: auto;
 }
 
+#hamburger {
+    display: none;
+}
+
 /* introduction section */
 
 #intro {
@@ -94,6 +104,7 @@ nav a:hover::after {
 }
 
 #intro::before {
+    z-index: 0;
     position: absolute;
     content: '';
     height: 300px;
@@ -113,6 +124,7 @@ nav a:hover::after {
 }
 
 #intro::after {
+    z-index: 0;
     position: absolute;
     content: '';
     height: 100px;
@@ -125,7 +137,7 @@ nav a:hover::after {
 }
 
 @keyframes lilcircle1 {
-    50%{
+    50% {
         left: 31%;
         top: 16%;
     }
@@ -137,6 +149,7 @@ nav a:hover::after {
 }
 
 .cols1::after {
+    z-index: 0;
     position: absolute;
     content: '';
     width: 150px;
@@ -148,8 +161,8 @@ nav a:hover::after {
     animation: lilcircle2 2s linear infinite;
 }
 
-@keyframes lilcircle2{
-    50%{
+@keyframes lilcircle2 {
+    50% {
         right: -2%;
         bottom: -2%
     }
@@ -235,4 +248,222 @@ h1 {
         left: 63%;
         width: 135%;
     }
+}
+
+
+/* about page */
+
+#greeting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 20%;
+}
+
+#greeting::after {
+    content: '';
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    z-index: 0;
+    position: absolute;
+    right: -10%;
+    top: 30%;
+    background: linear-gradient(45deg, rgba(116, 23, 208, 0.958), rgb(252, 168, 244));
+    animation: circle1 2s linear infinite;
+}
+
+@keyframes circle1 {
+    50% {
+        right: -11%;
+        top: 32%;
+    }
+}
+
+#greeting .image {
+    position: relative;
+    right: 0px;
+    animation: myphoto 1.5s linear infinite;
+}
+
+@keyframes myphoto {
+    50% {
+        right: 10px;
+    }
+}
+
+#greeting img {
+    width: 80%;
+    border-radius: 10px;
+}
+
+
+#greeting .texts {
+    width: 100%;
+}
+
+#greeting .texts h1 {
+    font-size: 45px;
+}
+
+/* storyline section */
+
+#storyline {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 80px;
+}
+
+.maintext {
+    width: 50%;
+    padding: 0px 30px;
+}
+
+#storyline .educationandexperience {
+    width: 50%;
+}
+
+#storyline table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-bottom: 20px;
+    border: 1px solid #383838;
+}
+
+#storyline table tr {
+    border: 1px solid #606060;
+}
+
+#storyline table td {
+    padding: 5px 5px;
+    border: 1px solid #606060;
+}
+
+
+/* media query */
+
+@media (max-width: 570px) {
+
+    body {
+        overflow: auto;
+    }
+
+    #header {
+        padding: 0px 20px;
+        /* align-items: flex-start; */
+
+    }
+
+    #header .links {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        z-index: 75;
+        top: 0px;
+        right: -400px;
+        width: 200px;
+        border-radius: 0 0 0 15px;
+        background-color: #f3f5f8;
+        box-shadow: 0px 5px 70px rgb(222, 218, 218);
+        padding: 10px 0 40px 10px;
+        transition: 0.3s;
+    }
+
+    nav ul li {
+        top: 20px;
+    }
+
+    nav ul.active {
+        right: 0px;
+    }
+
+    #header .links-mob {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 30px 0px 0px 20px;
+    }
+
+    #header .links-mob a {
+        padding-right: 15px;
+    }
+
+    #header .links-mob a:hover {
+        color: rgb(190, 31, 229);
+    }
+
+    #hamburger {
+        display: flex;
+        align-items: center;
+        color: #494949;
+    }
+
+    #close {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #494949;
+    }
+
+
+    #intro {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .cols {
+        width: 100%;
+    }
+
+    .cols0 {
+        z-index: 60;
+    }
+
+    .cols1 {
+        margin-top: 15px;
+    }
+
+    #intro h1 {
+        width: 60%;
+    }
+
+    .cols img {
+        z-index: 5;
+    }
+
+    .cols1::after {
+        display: none;
+    }
+
+    #intro::after {
+        animation: none;
+    }
+
+    .imgbox img {
+        animation: none;
+        top: 40px;
+    }
+
+
+    #splash {
+        transform: translate(-50%, -50%) rotate(-20deg);
+        width: 100%;
+        animation: animate 2s linear infinite;
+    }
+
+    @keyframes animate {
+        50% {
+            width: 145%;
+        }
+    }
+
+
 }
