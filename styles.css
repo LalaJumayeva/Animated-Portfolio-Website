@@ -265,7 +265,7 @@ h1 {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    z-index: 0;
+    z-index: -1;
     position: absolute;
     right: -10%;
     top: 30%;
@@ -284,25 +284,27 @@ h1 {
     position: relative;
 }
 
-#greeting img {
+#greeting #myphoto{
     width: 80%;
-    border-radius: 10px;
+    border-radius: 50%;
 }
 
-#greeting #colorsplash{
+#greeting #colorsplash {
     position: absolute;
     z-index: 0;
-    width: 40%;
-    bottom: 180px;
-    left: 0;
+    width: 22%;
+    top: 150px;
+    left: 230px;
     height: auto;
-    transform: rotate(-10deg);
-    animation: colorobject 3s linear infinite;
+    transform: rotate(-20deg);
+    animation: colorobject 2.5s linear infinite;
 }
 
-@keyframes colorobject{
-    50%{
-        width: 38%;
+@keyframes colorobject {
+    50% {
+        top:135px;
+        opacity: 0.5;
+        left:235px;
     }
 }
 
@@ -329,7 +331,7 @@ h1 {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    z-index: 0;
+    z-index: -1;
     position: absolute;
     left: -3%;
     bottom: -35%;
@@ -337,9 +339,9 @@ h1 {
     animation: circle2 2s linear infinite;
 }
 
-@keyframes circle2{
-    50%{
-        left:-2%;
+@keyframes circle2 {
+    50% {
+        left: -2%;
         bottom: -36%;
     }
 }
@@ -349,10 +351,11 @@ h1 {
     padding: 0px 30px;
 }
 
-.maintext h2{
+.maintext h2 {
     padding-bottom: 5px;
 }
-.maintext p{
+
+.maintext p {
     padding-top: 10px;
 }
 
@@ -377,18 +380,150 @@ h1 {
     border: 1px solid #606060;
 }
 
-.education{
+.education {
     padding-top: 55px;
 }
 
+#hobbies .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 43%;
+    background-color: white;
+    padding: 20px 50px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0px 5px 10px rgb(171, 171, 171);
+}
+
+#hobbies .container p{
+    margin-bottom: 0.5rem;
+}
+
+#hobbies .list{
+    padding-top: 15px;
+    padding-bottom: 0px;
+}
+
+#hobbies .container img{
+    width: 40%;
+    border-radius: 50%;
+}
+
+#hobbies{
+    padding: 10px 105px;
+    display: flex;
+    flex-direction: column;
+}
+
+#hobbies h2{
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+#hobbies .hobby{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+/* Skills page */
+
+#skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+
+}
+
+#skills::after {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    left: -5%;
+    bottom:-5%;
+    background: linear-gradient(45deg, rgba(116, 23, 208, 0.958), rgb(252, 168, 244));
+
+}
+
+#skills::before {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    right: -1%;
+    top:15%;
+    background: linear-gradient(45deg, rgba(116, 23, 208, 0.958), rgb(252, 168, 244));
+
+}
+
+#skills button {
+    position: absolute;
+    bottom: 25px;
+    box-shadow: 0px 15px 5px rgb(139, 139, 139);
+    animation: buttonn 2s linear infinite;
+}
+
+@keyframes buttonn {
+    50% {
+        box-shadow: 0px 15px 5px rgb(201, 201, 201);
+    }
+}
+
+#skills .shadow {
+    position: absolute;
+    z-index: -1;
+    width: 47%;
+    height: 420px;
+    background-color: #b37ceaf4;
+    border-radius: 30px;
+    transform: rotate(8deg);
+    animation: shadow 2s linear infinite;
+}
+
+@keyframes shadow {
+    50% {
+        transform: rotate(12deg);
+    }
+}
+
+#skills .keyskills {
+    background-color: rgb(255, 255, 255);
+    padding: 40px 40px 40px 60px;
+    border-radius: 30px;
+    width: 45%;
+}
+
+#skills table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+#skills table thead td {
+    font-size: 20px;
+}
+
+#skills table td {
+    padding: 15px 0;
+}
 
 /* media query */
 
 @media (max-width: 570px) {
-
-    body {
-        overflow: auto;
-    }
 
     #header {
         padding: 0px 20px;
@@ -505,5 +640,45 @@ h1 {
         }
     }
 
+    /* about page */
 
+    #greeting {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #greeting .image {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+
+    #storyline {
+        flex-direction: column;
+        padding: 10px 10px;
+    }
+
+    #greeting::after {
+        display: none;
+    }
+
+    .maintext {
+        width: 100%;
+    }
+
+    #storyline .educationandexperience {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    #storyline table {
+        width: 200%;
+    }
+
+    #greeting #colorsplash {
+        top: 80px;
+        width: 40%;
+        left: 70px;
+        animation: none;
+    }
 }
