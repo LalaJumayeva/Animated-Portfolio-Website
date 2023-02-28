@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <title>Lala's Portfolio</title>
+</head>
+<style>
+    body {
+        overflow-x: hidden;
+    }
+</style>
+
+<body>
+    <section id="header">
+        <a class="logo" href="index.html"><img src="image/logo.png" alt=""></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+                <div class="links-mob">
+                    <a href="https://www.linkedin.com/in/lala-jumayeva98/"><i
+                            class="fa-brands fa-linkedin fa-xl"></i></a>
+                    <a href="https://github.com/LalaJumayeva"><i class="fa-brands fa-github fa-xl"></i></a>
+                    <a href="https://www.behance.net/lalacumayeva"><i class="fa-brands fa-behance fa-xl"></i></a>
+                </div>
+
+            </ul>
+        </nav>
+        <div class="links">
+            <a href="https://www.linkedin.com/in/lala-jumayeva98/"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+            <a href="https://github.com/LalaJumayeva"><i class="fa-brands fa-github fa-xl"></i></a>
+            <a href="https://www.behance.net/lalacumayeva"><i class="fa-brands fa-behance fa-xl"></i></a>
+        </div>
+
+        <div id="hamburger">
+            <i class="fa-solid fa-bars fa-xl"></i>
+        </div>
+    </section>
+
+    <section id="sendemail">
+        <div class="emailform">
+            <div class="email">
+                <h2><span class="contactmetext"></span></h2>
+                <p>Do you speak Cattish? It's ok if you don't, I speak English too!</p>
+                <div class="mailcontainer">
+                    <form class="form-contact">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <input type="email" id="email" placeholder="Email id" required>
+                        <input type="text" id="phone" placeholder="Phone Number">
+                        <textarea id="message" rows="4" placeholder="your message.."></textarea>
+                        <button class="btn btn-outline-dark" id="submit" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="contactimage">
+                <img src="image/contactcat.png" alt="">
+            </div>
+        </div>
+        <div class="contactdetails">
+            <p>jumayevalala98@gmail.com <i class="fa-solid fa-envelope fa-lg"></i></p>
+            <p>+36 20 596 83 96 <i class="fa-solid fa-phone fa-lg"></i></p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>let t = new Typed(".contactmetext", {
+            strings: ["contact me_"],
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 80,
+            backDelay: 1500
+        })
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>
