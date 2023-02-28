@@ -514,7 +514,7 @@ h1 {
 
 @keyframes buttonn {
     50% {
-        box-shadow: 0px 15px 5px rgb(201, 201, 201);
+        box-shadow: 0px 15px 5px rgba(139, 139, 139, 0.57);
     }
 }
 
