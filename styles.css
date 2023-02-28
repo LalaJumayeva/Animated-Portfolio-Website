@@ -284,7 +284,7 @@ h1 {
     position: relative;
 }
 
-#greeting #myphoto{
+#greeting #myphoto {
     width: 80%;
     border-radius: 50%;
 }
@@ -302,9 +302,9 @@ h1 {
 
 @keyframes colorobject {
     50% {
-        top:135px;
+        top: 135px;
         opacity: 0.5;
-        left:235px;
+        left: 235px;
     }
 }
 
@@ -384,7 +384,36 @@ h1 {
     padding-top: 55px;
 }
 
-#hobbies .container{
+/* hobbies section */
+
+#hobbies {
+    position: relative;
+    padding: 10px 105px;
+    display: flex;
+    flex-direction: column;
+}
+
+#hobbies::after {
+    z-index: -1;
+    position: absolute;
+    content: '';
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(116, 23, 208, 0.958), rgb(252, 168, 244));
+    right: 10px;
+    top: 50px;
+    animation: ball 3s linear infinite;
+}
+
+@keyframes ball {
+    50% {
+        right: 15px;
+        top: 80px;
+    }
+}
+
+#hobbies .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -396,41 +425,47 @@ h1 {
     box-shadow: 0px 5px 10px rgb(171, 171, 171);
 }
 
-#hobbies .container p{
+#hobbies .container p {
     margin-bottom: 0.5rem;
 }
 
-#hobbies .list{
+
+#hobbies .container-2 {
+    width: 100%;
+    padding: 20px 250px;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    background-image: url(image/catto.png);
+    background-position: top 20% right 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    margin-bottom: 20px;
+
+}
+
+#hobbies .list {
     padding-top: 15px;
     padding-bottom: 0px;
 }
 
-#hobbies .container img{
+#hobbies .container img {
     width: 40%;
     border-radius: 50%;
 }
 
-#hobbies{
-    padding: 10px 105px;
-    display: flex;
-    flex-direction: column;
-}
-
-#hobbies h2{
+#hobbies h2 {
     margin-top: 30px;
     margin-bottom: 40px;
+    text-align: center;
 }
 
-#hobbies .hobby{
+#hobbies .hobby {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
-
-
-
-
 
 
 /* Skills page */
@@ -452,7 +487,7 @@ h1 {
     height: 300px;
     border-radius: 50%;
     left: -5%;
-    bottom:-5%;
+    bottom: -5%;
     background: linear-gradient(45deg, rgba(116, 23, 208, 0.958), rgb(252, 168, 244));
 
 }
@@ -465,7 +500,7 @@ h1 {
     height: 200px;
     border-radius: 50%;
     right: -1%;
-    top:15%;
+    top: 15%;
     background: linear-gradient(45deg, rgba(116, 23, 208, 0.958), rgb(252, 168, 244));
 
 }
@@ -519,6 +554,148 @@ h1 {
 
 #skills table td {
     padding: 15px 0;
+}
+
+
+/* contact me page */
+
+#sendemail {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 85vh;
+    padding: 30px 150px;
+}
+
+#sendemail::before {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, rgba(116, 23, 208, 0.958), rgb(252, 168, 244));
+    border-radius: 50%;
+    right: 40%;
+    top: 5%;
+    transform: rotate(-40deg);
+    animation: behindcat 2s linear infinite;
+}
+
+@keyframes behindcat {
+    50% {
+        transform: rotate(-50deg);
+        right: 38%;
+        top: 6%;
+    }
+}
+
+#sendemail::after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, rgba(116, 23, 208, 0.958), rgb(252, 168, 244));
+    border-radius: 50%;
+    left: 10px;
+    bottom: 190px;
+    animation: mailcircle 3s linear infinite;
+}
+
+@keyframes mailcircle {
+    50% {
+        left: 0px;
+        bottom: 180px;
+    }
+}
+
+.emailform {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sendemail .email {
+    width: 50%;
+}
+
+#sendemail .contactimage {
+    width: 50%;
+}
+
+#sendemail .contactimage img {
+    position: relative;
+    left: 20%;
+    width: 70%;
+    transform: rotate(10deg);
+    animation: cat 2s linear infinite;
+}
+
+@keyframes cat {
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+.mailcontainer form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 4vw 2vw 0;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 20px;
+}
+
+
+.mailcontainer form input,
+.mailcontainer form textarea {
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #ffffff;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.mailcontainer form button {
+    width: 50%;
+    margin-top: 5px;
+}
+
+
+.contactdetails {
+    text-align: right;
+    position: absolute;
+    bottom: 20px;
+}
+
+.contactdetails i {
+    padding-left: 10px;
+    color: rgba(116, 23, 208, 0.958);
+}
+
+.contactdetails::after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, rgba(116, 23, 208, 0.958), rgb(252, 168, 244));
+    border-radius: 50%;
+    right: -190px;
+    bottom: 10px;
+    animation: mailcircle 2s linear infinite;
+}
+
+@keyframes mailcircle {
+    50% {
+        right: -184px;
+        bottom: 18px;
+    }
 }
 
 /* media query */
@@ -680,5 +857,101 @@ h1 {
         width: 40%;
         left: 70px;
         animation: none;
+    }
+
+    #hobbies {
+        padding: 10px 10px;
+    }
+
+    #hobbies .hobby {
+        flex-direction: column;
+    }
+
+    #hobbies .container {
+        width: 100%;
+        padding: 20px 25px;
+    }
+
+    #hobbies .container-2 {
+        padding: 20px 20px;
+        background-position: top 20% right 70%;
+    }
+
+
+    /* skills section */
+
+    #skills {
+        padding: 30px 20px;
+    }
+
+    #skills .keyskills {
+        padding: 40px 20px 40px 20px;
+        width: 100%;
+    }
+
+    #skills button {
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    #skills table td{
+        border-bottom: 1px solid rgb(197, 197, 197);
+    }
+
+    #skills .shadow{
+        display: none;
+    }
+
+    #skills::after {
+        left: -8%;
+        bottom: 5%;
+    }
+
+    #theadtext{
+        width: 120px;
+    }
+
+    /* contact page */
+
+    .emailform {
+        flex-direction: column;
+    }
+
+    #sendemail {
+        padding: 30px 10px;
+        align-items: center;
+    }
+
+    #sendemail .email {
+        width: 100%;
+    }
+
+    #sendemail .contactimage {
+        width: 100%;
+    }
+
+    #sendemail .contactimage img {
+        left: 17%;
+    }
+
+    .contactdetails {
+        margin-top: 20px;
+        position: relative;
+        text-align: center;
+    }
+
+    .contactdetails::after {
+        display: none;
+    }
+
+    .mailcontainer form {
+        width: 100%;
+        padding: 0 0 2vw 0;
+    }
+
+    .mailcontainer form button {
+        width: 100%;
+        margin-top: 5px;
     }
 }
